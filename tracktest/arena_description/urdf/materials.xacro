@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<robot name="arena" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<material name="CuboA0Material">
+  <texture filename="package://arena_description/textures/A0.png"/>
+</material>
+
+<material name="Base_de_TakeoffMaterial">
+  <texture filename="package://arena_description/textures/Base_de_Takeoff.png"/>
+</material>
+
+</robot>

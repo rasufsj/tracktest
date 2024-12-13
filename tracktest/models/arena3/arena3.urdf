@@ -1,0 +1,670 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="arena3">
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.04999999999999956 3.9999999999999987 4.151234949058351" rpy="0.0 0.0 0.0" />
+            <mass value="50852.299999999996" />
+            <inertia ixx="548920.5270285327" iyy="277911.87627853174" izz="271093.4045833327" ixy="4.219776156466371e-10" iyz="1.0136661484731285e-10" ixz="-1.3786939823890634e-10" />
+        </inertial>
+        <visual name="base_link_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="base_link_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="piso">
+        <inertial>
+            <origin xyz="4.051311075503581 3.755345033912505e-05 -3.8978588629953443" rpy="0.0 -0.0 0.0" />
+            <mass value="50264.649" />
+            <inertia ixx="268677.25992561993" iyy="537241.6067224811" izz="268647.9978614189" ixy="3.3022105256368373" iyz="5.294360733867505" ixz="177.26065253478006" />
+        </inertial>
+        <visual name="piso_visual">
+            <origin xyz="0.05 0.05000000000000002 -7.900000000000001" rpy="1.5707963267948966 -5.5511151230449725e-17 1.1102230246251565e-16" />
+            <geometry>
+                <mesh filename="meshes/piso.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="piso_collision">
+            <origin xyz="0.05 0.05000000000000002 -7.900000000000001" rpy="1.5707963267948966 -5.5511151230449725e-17 1.1102230246251565e-16" />
+            <geometry>
+                <mesh filename="meshes/piso.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="parede2">
+        <inertial>
+            <origin xyz="4.001219698124713 1.1368683772161603e-15 3.950000000000001" rpy="-5.473822126268817e-48 -6.842277657836022e-49 0.0" />
+            <mass value="51488.149999999994" />
+            <inertia ixx="281388.9935833317" iyy="562692.0969862903" izz="281388.91698629316" ixy="-1.734193564042016e-27" iyz="-9.313225746154784e-10" ixz="-2.328306436538696e-10" />
+        </inertial>
+        <visual name="parede2_visual">
+            <origin xyz="-0.15 8.05 0.0" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/parede2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="parede2_collision">
+            <origin xyz="-0.15 8.05 0.0" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/parede2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="parede3">
+        <inertial>
+            <origin xyz="0.0 4.001219698124713 3.950000000000001" rpy="0.0 -0.0 0.0" />
+            <mass value="51488.149999999994" />
+            <inertia ixx="562692.096986291" iyy="281388.99358333263" izz="281388.9169862893" ixy="2.328306436538696e-10" iyz="3.4924596548080434e-10" ixz="-1.164153218269348e-09" />
+        </inertial>
+        <visual name="parede3_visual">
+            <origin xyz="-8.05 -0.15 8.000000000000002" rpy="-1.5707963267948966 5.5511151230449725e-17 -1.1102230246251565e-16" />
+            <geometry>
+                <mesh filename="meshes/parede3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="parede3_collision">
+            <origin xyz="-8.05 -0.15 8.000000000000002" rpy="-1.5707963267948966 5.5511151230449725e-17 -1.1102230246251565e-16" />
+            <geometry>
+                <mesh filename="meshes/parede3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="parede4">
+        <inertial>
+            <origin xyz="4.001204819277108 -2.3092638912203257e-16 4.0" rpy="-5.473822126268817e-48 -6.842277657836022e-49 0.0" />
+            <mass value="52123.99999999999" />
+            <inertia ixx="291942.0233333326" iyy="576721.1076706818" izz="284865.9576706828" ixy="1.273292582482099e-10" iyz="-3.6743585951626296e-10" ixz="-3.492459654808044e-10" />
+        </inertial>
+        <visual name="parede4_visual">
+            <origin xyz="-0.15 -0.05 -3.552713678800501e-17" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/parede4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="parede4_collision">
+            <origin xyz="-0.15 -0.05 -3.552713678800501e-17" rpy="-3.141592653589793 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/parede4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="prateleira">
+        <inertial>
+            <origin xyz="0.00010377143843697922 1.9499636789186838 1.9546700793635738" rpy="0.0 -0.0 0.0" />
+            <mass value="3788.0900444916265" />
+            <inertia ixx="11660.252028799558" iyy="3086.56643726112" izz="8630.4806542517" ixy="-0.013773031590972094" iyz="-0.048601869304548004" ixz="0.01169535102235386" />
+        </inertial>
+        <visual name="prateleira_visual">
+            <origin xyz="-7.749999999999941 -3.049999999999983 -0.1989999999999914" rpy="-9.324541102565256e-16 6.738535997530123e-16 5.551115123125752e-17" />
+            <geometry>
+                <mesh filename="meshes/prateleira.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="prateleira_collision">
+            <origin xyz="-7.749999999999941 -3.049999999999983 -0.1989999999999914" rpy="-9.324541102565256e-16 6.738535997530123e-16 5.551115123125752e-17" />
+            <geometry>
+                <mesh filename="meshes/prateleira.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_A0">
+        <inertial>
+            <origin xyz="-2.6147972675971688e-14 -2.1600499167107046e-14 0.049999999999980956" rpy="0.0 -0.0 0.0" />
+            <mass value="7.85" />
+            <inertia ixx="0.013083333333327118" iyy="0.013083333333213432" izz="0.013083333333156588" ixy="5.684341886080802e-14" iyz="-2.842170943040401e-14" ixz="-1.4210854715202004e-14" />
+        </inertial>
+        <visual name="cubo_A0_visual">
+            <origin xyz="-7.650000000000026 -3.8500000000000227 -1.300000000000007" rpy="-6.183424485211102e-16 1.1102230246251568e-16 5.551115123125782e-17" />
+            <geometry>
+                <mesh filename="meshes/cubo_A0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_A0_collision">
+            <origin xyz="-7.650000000000026 -3.8500000000000227 -1.300000000000007" rpy="-6.183424485211102e-16 1.1102230246251568e-16 5.551115123125782e-17" />
+            <geometry>
+                <mesh filename="meshes/cubo_A0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_A1">
+        <inertial>
+            <origin xyz="-2.842170943040401e-14 -2.7284841053187846e-14 0.04999999999998266" rpy="0.0 -0.0 0.0" />
+            <mass value="7.85" />
+            <inertia ixx="0.013083333333412384" iyy="0.013083333333156588" izz="0.013083333333611336" ixy="5.684341886080802e-14" iyz="-2.1316282072803006e-14" ixz="-1.4210854715202004e-14" />
+        </inertial>
+        <visual name="cubo_A1_visual">
+            <origin xyz="-1.3500000000000194 4.649999999999968 -7.600000000000019" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_A1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_A1_collision">
+            <origin xyz="-1.3500000000000194 4.649999999999968 -7.600000000000019" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_A1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_A3">
+        <inertial>
+            <origin xyz="-3.524291969370097e-14 -4.092726157978177e-14 0.04999999999998039" rpy="0.0 -0.0 0.0" />
+            <mass value="7.85" />
+            <inertia ixx="0.013083333333497649" iyy="0.013083333333327118" izz="0.013083333333156588" ixy="1.1368683772161603e-13" iyz="-5.684341886080802e-14" ixz="-5.684341886080802e-14" />
+        </inertial>
+        <visual name="cubo_A3_visual">
+            <origin xyz="-1.350000000000025 6.349999999999954 -7.600000000000022" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_A3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_A3_collision">
+            <origin xyz="-1.350000000000025 6.349999999999954 -7.600000000000022" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_A3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_A2">
+        <inertial>
+            <origin xyz="-3.2969182939268646e-14 -3.637978807091713e-14 0.04999999999998039" rpy="0.0 -0.0 0.0" />
+            <mass value="7.85" />
+            <inertia ixx="0.013083333333497649" iyy="0.013083333333327118" izz="0.013083333333270275" ixy="5.684341886080802e-14" iyz="-5.684341886080802e-14" ixz="-5.684341886080802e-14" />
+        </inertial>
+        <visual name="cubo_A2_visual">
+            <origin xyz="-1.3500000000000227 5.549999999999959 -7.600000000000022" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_A2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_A2_collision">
+            <origin xyz="-1.3500000000000227 5.549999999999959 -7.600000000000022" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_A2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_B0">
+        <inertial>
+            <origin xyz="-1.432454155292362e-13 -7.958078640513123e-14 0.049999999999995166" rpy="0.0 -0.0 0.0" />
+            <mass value="7.850000000007763" />
+            <inertia ixx="0.013083333333725022" iyy="0.013083333333327118" izz="0.013083333333383962" ixy="1.7053025658242404e-13" iyz="1.5631940186722204e-13" ixz="-5.684341886080802e-14" />
+        </inertial>
+        <visual name="cubo_B0_visual">
+            <origin xyz="-1.9000000000001034 6.149999999999919 -7.599999999999895" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_B0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_B0_collision">
+            <origin xyz="-1.9000000000001034 6.149999999999919 -7.599999999999895" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_B0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_B1">
+        <inertial>
+            <origin xyz="-1.3301360013429075e-13 -7.503331289626658e-14 0.049999999999988345" rpy="0.0 -0.0 0.0" />
+            <mass value="7.850000000006157" />
+            <inertia ixx="0.013083333333497649" iyy="0.013083333333383962" izz="0.013083333333270275" ixy="5.684341886080802e-14" iyz="-2.842170943040401e-14" ixz="-9.448429489215297e-47" />
+        </inertial>
+        <visual name="cubo_B1_visual">
+            <origin xyz="-1.9000000000000945 5.449999999999923 -7.599999999999913" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_B1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_B1_collision">
+            <origin xyz="-1.9000000000000945 5.449999999999923 -7.599999999999913" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_B1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_B2">
+        <inertial>
+            <origin xyz="-1.20508047984913e-13 -6.30961949354969e-14 0.04999999999997698" rpy="0.0 -0.0 0.0" />
+            <mass value="7.85000000000464" />
+            <inertia ixx="0.013083333333611336" iyy="0.013083333333554492" izz="0.013083333333270275" ixy="5.684341886080802e-14" iyz="-4.263256414560601e-14" ixz="-2.842170943040401e-14" />
+        </inertial>
+        <visual name="cubo_B2_visual">
+            <origin xyz="1.8999999999998387 -4.70000000000007 -7.5999999999999295" rpy="-6.69535286834775e-17 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_B2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_B2_collision">
+            <origin xyz="1.8999999999998387 -4.70000000000007 -7.5999999999999295" rpy="-6.69535286834775e-17 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_B2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_B3">
+        <inertial>
+            <origin xyz="-1.0459189070388675e-13 -5.74118530494161e-14 0.04999999999996788" rpy="0.0 -0.0 0.0" />
+            <mass value="7.850000000002766" />
+            <inertia ixx="0.013083333333270275" iyy="0.013083333333156588" izz="0.013083333333270275" ixy="1.1368683772161603e-13" iyz="1.1368683772161603e-13" ixz="-7.105427357601002e-14" />
+        </inertial>
+        <visual name="cubo_B3_visual">
+            <origin xyz="1.8999999999998556 -3.8500000000000645 -7.599999999999956" rpy="-6.69535286834775e-17 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_B3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_B3_collision">
+            <origin xyz="1.8999999999998556 -3.8500000000000645 -7.599999999999956" rpy="-6.69535286834775e-17 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_B3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_C0">
+        <inertial>
+            <origin xyz="-1.2278178473934532e-13 -2.4729979486437516e-09 0.04999999999992696" rpy="0.0 -0.0 0.0" />
+            <mass value="7.850000000002231" />
+            <inertia ixx="0.013083333333668179" iyy="0.013083333333270275" izz="0.013083333333611336" ixy="2.2737367544323206e-13" iyz="-1.1368683772161603e-13" ixz="-5.684341886080802e-14" />
+        </inertial>
+        <visual name="cubo_C0_visual">
+            <origin xyz="-2.450000000000047 6.207586632581124 -7.599999999999987" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_C0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_C0_collision">
+            <origin xyz="-2.450000000000047 6.207586632581124 -7.599999999999987" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_C0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_C1">
+        <inertial>
+            <origin xyz="-1.1596057447604835e-13 -7.844391802791507e-14 0.04999999999992355" rpy="0.0 -0.0 0.0" />
+            <mass value="7.850000000002141" />
+            <inertia ixx="0.013083333333952396" iyy="0.013083333333497649" izz="0.013083333333611336" ixy="1.1368683772161603e-13" iyz="5.684341886080802e-14" ixz="-5.684341886080802e-14" />
+        </inertial>
+        <visual name="cubo_C1_visual">
+            <origin xyz="-2.450000000000041 5.549999999999918 -7.599999999999994" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_C1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_C1_collision">
+            <origin xyz="-2.450000000000041 5.549999999999918 -7.599999999999994" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_C1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_C2">
+        <inertial>
+            <origin xyz="-1.0686562745831907e-13 -6.423306331271306e-14 0.04999999999991559" rpy="0.0 -0.0 0.0" />
+            <mass value="7.849999999999731" />
+            <inertia ixx="0.013083333333469227" iyy="0.013083333333156588" izz="0.013083333333270275" ixy="1.1368683772161603e-13" iyz="-4.263256414560601e-14" ixz="2.842170943040401e-14" />
+        </inertial>
+        <visual name="cubo_C2_visual">
+            <origin xyz="-2.4500000000000317 4.699999999999932 -7.600000000000023" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_C2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_C2_collision">
+            <origin xyz="-2.4500000000000317 4.699999999999932 -7.600000000000023" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_C2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_C3">
+        <inertial>
+            <origin xyz="-1.0004441719502211e-13 -6.082245818106458e-14 0.049999999999921274" rpy="0.0 -0.0 0.0" />
+            <mass value="7.849999999999374" />
+            <inertia ixx="0.013083333333554492" iyy="0.013083333333270275" izz="0.013083333333383962" ixy="1.4210854715202004e-13" iyz="-5.684341886080802e-14" ixz="-2.842170943040401e-14" />
+        </inertial>
+        <visual name="cubo_C3_visual">
+            <origin xyz="-2.450000000000025 3.749999999999924 -7.600000000000011" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_C3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_C3_collision">
+            <origin xyz="-2.450000000000025 3.749999999999924 -7.600000000000011" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_C3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cupo_D0">
+        <inertial>
+            <origin xyz="-1.580247044330463e-13 -8.29913915367797e-14 0.04999999999992667" rpy="0.0 -0.0 0.0" />
+            <mass value="7.850000000008834" />
+            <inertia ixx="0.013083333333668179" iyy="0.013083333333611336" izz="0.013083333333383962" ixy="5.684341886080802e-14" iyz="1.1368683772161603e-13" ixz="-1.1368683772161603e-13" />
+        </inertial>
+        <visual name="cupo_D0_visual">
+            <origin xyz="-3.00000000000004 6.3499999999999135 -7.599999999999953" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cupo_D0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cupo_D0_collision">
+            <origin xyz="-3.00000000000004 6.3499999999999135 -7.599999999999953" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cupo_D0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cupo_D1">
+        <inertial>
+            <origin xyz="-1.523403625469655e-13 -7.844391802791507e-14 0.04999999999995623" rpy="0.0 -0.0 0.0" />
+            <mass value="7.850000000013654" />
+            <inertia ixx="0.013083333333668179" iyy="0.013083333333270275" izz="0.013083333333383962" ixy="5.684341886080802e-14" iyz="-5.684341886080802e-14" ixz="-5.684341886080802e-14" />
+        </inertial>
+        <visual name="cupo_D1_visual">
+            <origin xyz="-3.000000000000033 5.549999999999918 -7.599999999999959" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cupo_D1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cupo_D1_collision">
+            <origin xyz="-3.000000000000033 5.549999999999918 -7.599999999999959" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cupo_D1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cupo_D2">
+        <inertial>
+            <origin xyz="-1.4779288903810084e-13 -7.048583938740194e-14 0.04999999999992156" rpy="0.0 -0.0 0.0" />
+            <mass value="7.85000000000812" />
+            <inertia ixx="0.013083333333668179" iyy="0.013083333333383962" izz="0.013083333333156588" ixy="5.684341886080802e-14" iyz="-1.2789769243681803e-13" ixz="-1.1368683772161603e-13" />
+        </inertial>
+        <visual name="cupo_D2_visual">
+            <origin xyz="-3.0000000000000298 4.699999999999927 -7.599999999999964" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cupo_D2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cupo_D2_collision">
+            <origin xyz="-3.0000000000000298 4.699999999999927 -7.599999999999964" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cupo_D2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="cubo_D3">
+        <inertial>
+            <origin xyz="-1.432454155292362e-13 -6.366462912410498e-14 0.04999999999992213" rpy="0.0 -0.0 0.0" />
+            <mass value="7.850000000007942" />
+            <inertia ixx="0.013083333333554492" iyy="0.013083333333270275" izz="0.013083333333383962" ixy="1.1368683772161603e-13" iyz="-4.263256414560601e-14" ixz="-2.842170943040401e-14" />
+        </inertial>
+        <visual name="cubo_D3_visual">
+            <origin xyz="-3.0000000000000258 3.7499999999999343 -7.59999999999997" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_D3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="cubo_D3_collision">
+            <origin xyz="-3.0000000000000258 3.7499999999999343 -7.59999999999997" rpy="-3.141592653589793 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/cubo_D3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Base_de_Takeoff">
+        <inertial>
+            <origin xyz="2.842170943040401e-16 -1.4210854715202004e-16 0.25049999999999983" rpy="0.0 -0.0 0.0" />
+            <mass value="11798.549999999997" />
+            <inertia ixx="2459.0154457124936" iyy="4179.637320712489" izz="6145.078124999998" ixy="3.6379788070917125e-12" iyz="3.787196790891681e-29" ixz="1.5154852737946934e-29" />
+        </inertial>
+        <visual name="Base_de_Takeoff_visual">
+            <origin xyz="-1.000000000000035 -0.7500000000000396 -0.20100000000000925" rpy="-5.551115123125764e-17 1.1102230246251565e-16 5.5511151230449725e-17" />
+            <geometry>
+                <mesh filename="meshes/Base_de_Takeoff.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Base_de_Takeoff_collision">
+            <origin xyz="-1.000000000000035 -0.7500000000000396 -0.20100000000000925" rpy="-5.551115123125764e-17 1.1102230246251565e-16 5.5511151230449725e-17" />
+            <geometry>
+                <mesh filename="meshes/Base_de_Takeoff.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Base_suspensa_1.5">
+        <inertial>
+            <origin xyz="0.0 -5.684341886080802e-16 0.750499999999999" rpy="0.0 -0.0 0.0" />
+            <mass value="11782.849999999999" />
+            <inertia ixx="3194.1352360708297" iyy="3194.1352360708397" izz="1963.808333333232" ixy="1.455191522836685e-11" iyz="1.2102903277451475e-29" ixz="-1.455191522836685e-11" />
+        </inertial>
+        <visual name="Base_suspensa_1.5_visual">
+            <origin xyz="-7.1000000000000005 -1.100000000000001 -0.10000000000000014" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/Base_suspensa_1.5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Base_suspensa_1.5_collision">
+            <origin xyz="-7.1000000000000005 -1.100000000000001 -0.10000000000000014" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/Base_suspensa_1.5.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="base_supensa_1.0">
+        <inertial>
+            <origin xyz="1.2789769243681803e-15 -2.842170943040401e-15 0.5004999999999995" rpy="0.0 -0.0 0.0" />
+            <mass value="7857.849999999996" />
+            <inertia ixx="1310.951963154148" iyy="1310.9519631541639" izz="1309.6416666666187" ixy="-1.0913936421275137e-11" iyz="7.275957614183424e-12" ixz="-1.8189894035458563e-12" />
+        </inertial>
+        <visual name="base_supensa_1.0_visual">
+            <origin xyz="-1.0999999999999992 -3.6000000000000023 -0.10000000000000002" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/base_supensa_1.0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="base_supensa_1.0_collision">
+            <origin xyz="-1.0999999999999992 -3.6000000000000023 -0.10000000000000002" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/base_supensa_1.0.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Base_movel_1">
+        <inertial>
+            <origin xyz="1.1368683772161603e-15 -4.547473508864641e-15 0.6499999999999994" rpy="0.0 -0.0 0.0" />
+            <mass value="10205.0" />
+            <inertia ixx="2287.6208333331742" iyy="2287.6208333333334" izz="1700.8333333332553" ixy="-1.455191522836685e-11" iyz="1.4551915228366849e-11" ixz="3.6379788070917125e-12" />
+        </inertial>
+        <visual name="Base_movel_1_visual">
+            <origin xyz="-1.6999999999999986 -6.200000000000005 -0.10000000000000007" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/Base_movel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Base_movel_1_collision">
+            <origin xyz="-1.6999999999999986 -6.200000000000005 -0.10000000000000007" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/Base_movel_1.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="base_movel_2">
+        <inertial>
+            <origin xyz="1.1368683772161603e-15 -4.547473508864641e-15 0.6499999999999991" rpy="0.0 -0.0 0.0" />
+            <mass value="10205.0" />
+            <inertia ixx="2287.6208333331742" iyy="2287.620833333319" izz="1700.8333333332553" ixy="-5.82076609134674e-11" iyz="7.275957614183424e-12" ixz="3.6379788070917125e-12" />
+        </inertial>
+        <visual name="base_movel_2_visual">
+            <origin xyz="-3.6999999999999984 -6.200000000000005 -0.10000000000000013" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/base_movel_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="base_movel_2_collision">
+            <origin xyz="-3.6999999999999984 -6.200000000000005 -0.10000000000000013" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/base_movel_2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="base_movel_3">
+        <inertial>
+            <origin xyz="5.684341886080802e-16 -3.9790393202565614e-15 0.6499999999999991" rpy="0.0 -0.0 0.0" />
+            <mass value="10205.0" />
+            <inertia ixx="2287.6208333332906" iyy="2287.620833333319" izz="1700.8333333333135" ixy="4.9344931600391197e-29" iyz="3.637978807091712e-12" ixz="-3.6379788070917125e-12" />
+        </inertial>
+        <visual name="base_movel_3_visual">
+            <origin xyz="-4.199999999999999 -3.900000000000004 -0.10000000000000007" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/base_movel_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="base_movel_3_collision">
+            <origin xyz="-4.199999999999999 -3.900000000000004 -0.10000000000000007" rpy="1.9105225048317027e-31 3.4211388288682077e-49 5.551115123044972e-17" />
+            <geometry>
+                <mesh filename="meshes/base_movel_3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="base_link_Rigido6" type="fixed">
+        <origin xyz="-0.05000000000000087 7.9 0.15000000000000044" rpy="-1.5707963267948966 -1.1102230246251565e-16 -5.551115123044973e-17" />
+        <parent link="base_link" />
+        <child link="piso" />
+    </joint>
+    <joint name="piso_Rigido7" type="fixed">
+        <origin xyz="0.05 0.0 0.14999999999999886" rpy="-1.5707963267948966 -0.0 -1.5707963267948966" />
+        <parent link="piso" />
+        <child link="parede2" />
+    </joint>
+    <joint name="piso_Rigido8" type="fixed">
+        <origin xyz="8.1 0.0 0.09999999999999887" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="piso" />
+        <child link="parede3" />
+    </joint>
+    <joint name="piso_Rigido9" type="fixed">
+        <origin xyz="0.05 0.0 -7.900000000000001" rpy="-1.5707963267948966 -0.0 -1.5707963267948966" />
+        <parent link="piso" />
+        <child link="parede4" />
+    </joint>
+    <joint name="piso_Rigido17" type="fixed">
+        <origin xyz="7.8 -0.049 -4.850000000000001" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="piso" />
+        <child link="prateleira" />
+    </joint>
+    <joint name="prateleira_deslizador_A0" type="fixed">
+        <origin xyz="-0.1 0.8 1.05" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_A0" />
+    </joint>
+    <joint name="prateleira_deslizador_A1" type="fixed">
+        <origin xyz="-0.1 1.6 1.05" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_A1" />
+    </joint>
+    <joint name="prateleira_delizador_A2" type="fixed">
+        <origin xyz="-0.1 2.5 1.05" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_A2" />
+    </joint>
+    <joint name="prateleira_delizador_A3" type="fixed">
+        <origin xyz="-0.1 3.3000000000000003 1.05" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_A3" />
+    </joint>
+    <joint name="prateleira_deslizador_B0" type="fixed">
+        <origin xyz="-0.1 3.1 1.6500000000000001" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_B0" />
+    </joint>
+    <joint name="prateleira_deslizador_B1" type="fixed">
+        <origin xyz="-0.1 2.4 1.6500000000000001" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_B1" />
+    </joint>
+    <joint name="prateleira_deslizador_B2" type="fixed">
+        <origin xyz="-0.1 1.6500000000000001 1.6500000000000001" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_B2" />
+    </joint>
+    <joint name="prateleira_deslizador_B3" type="fixed">
+        <origin xyz="-0.1 0.8 1.6500000000000001" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_B3" />
+    </joint>
+    <joint name="prateleira_deslizador_C3" type="fixed">
+        <origin xyz="-0.1 0.6 2.2" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_C3" />
+    </joint>
+    <joint name="prateleira_deslizador_C2" type="fixed">
+        <origin xyz="-0.1 1.5 2.2" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_C2" />
+    </joint>
+    <joint name="prateleira_deslizador_C1" type="fixed">
+        <origin xyz="-0.1 2.5 2.2" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_C1" />
+    </joint>
+    <joint name="prateleira_deslizador_C0" type="fixed">
+        <origin xyz="-0.1 3.1537933199999997 2.2" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_C0" />
+    </joint>
+    <joint name="prateleira_deslizador_D3" type="fixed">
+        <origin xyz="-0.1 0.7000000000000001 2.75" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cubo_D3" />
+    </joint>
+    <joint name="prateleira_deslizador_D2" type="fixed">
+        <origin xyz="-0.1 1.6500000000000001 2.75" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cupo_D2" />
+    </joint>
+    <joint name="prateleira_deslizador_D1" type="fixed">
+        <origin xyz="-0.1 2.5 2.75" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cupo_D1" />
+    </joint>
+    <joint name="prateleira_deslizador_D0" type="fixed">
+        <origin xyz="-0.1 3.3000000000000003 2.75" rpy="-6.162975822039156e-33 5.847028654060601e-65 9.487346410075616e-33" />
+        <parent link="prateleira" />
+        <child link="cupo_D0" />
+    </joint>
+    <joint name="piso_Rigido37" type="fixed">
+        <origin xyz="1.05 -0.049 -7.150000000000001" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="piso" />
+        <child link="Base_de_Takeoff" />
+    </joint>
+    <joint name="piso_Rigido-38" type="fixed">
+        <origin xyz="7.05 -0.049 -6.900000000000001" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="piso" />
+        <child link="Base_suspensa_1.5" />
+    </joint>
+    <joint name="piso_Rigido-39" type="fixed">
+        <origin xyz="1.05 -0.049 -4.400000000000001" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="piso" />
+        <child link="base_supensa_1.0" />
+    </joint>
+    <joint name="piso_Base_movel_1" type="fixed">
+        <origin xyz="4.05 -0.05 -3.9000000000000012" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="piso" />
+        <child link="base_movel_3" />
+    </joint>
+    <joint name="piso_Base_movel_3" type="fixed">
+        <origin xyz="1.6500000000000001 -0.0501 -1.8000000000000012" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="piso" />
+        <child link="Base_movel_1" />
+    </joint>
+    <joint name="piso_Base_movel_2" type="fixed">
+        <origin xyz="3.65 -0.0501 -1.8000000000000012" rpy="1.5707963267948966 -0.0 0.0" />
+        <parent link="piso" />
+        <child link="base_movel_2" />
+    </joint>
+</robot>

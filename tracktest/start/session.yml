@@ -1,0 +1,51 @@
+# do not modify these
+root: ./
+name: simulation
+socket_name: mrs
+attach: false
+tmux_options: -f /etc/ctu-mrs/tmux.conf
+# you can modify these
+pre_window: export UAV_NAME=uav1; export RUN_TYPE=simulation; export LOGGER_DEBUG=false; export UAV_TYPE=f450; source /home/lucas/catkin2_ws/devel/setup.bash
+startup_window: path
+windows:
+  - roscore:
+      layout: main-vertical
+      panes:
+        - roscore
+  - gazebo:
+      layout: main-vertical
+      panes:
+        - waitForRos; roslaunch mrs_uav_gazebo_simulation simulation.launch world_file:=/home/lucas/catkin2_ws/src/tracktest/worlds/arena2.world gui:=true
+        - waitForGazebo; rosservice call /mrs_drone_spawner/spawn "1 --pos 5 2 2.5 0.78 --$UAV_TYPE --enable-rangefinder --enable-rangefinder-up --enable-rplidar --enable-ground-truth --enable-bluefox-camera --enable-realsense-front"
+        - waitForControl; gz camera -c gzclient_camera -f $UAV_NAME; history -s gz camera -c gzclient_camera -f $UAV_NAME
+  - status:
+      layout: main-vertical
+      panes:
+        - waitForTime; roslaunch mrs_uav_status status.launch
+  - control:
+      layout: main-vertical
+      panes:
+        - waitForTime; roslaunch mrs_uav_core core.launch platform_config:=`rospack find mrs_multirotor_simulator`/config/mrs_uav_system/$UAV_TYPE.yaml custom_config:=./config/custom_config.yaml world_config:=./config/world_config.yaml network_config:=./config/network_config.yaml
+  - hw_api:
+      layout: main-vertical
+      panes:
+        - waitForTime; roslaunch mrs_uav_px4_api api.launch
+  - takeoff:
+      layout: main-vertical
+      panes:
+        - waitForHw; roslaunch mrs_uav_autostart automatic_start.launch
+        - 'waitForControl; rosservice call /$UAV_NAME/hw_api/arming 1; sleep 2.0; rosservice call /$UAV_NAME/hw_api/offboard'
+  - path:
+      layout: even-vertical
+      panes:
+        - python plan_path.py
+  - rviz:
+      layout: tiled
+      panes:
+        - waitForControl; roslaunch mrs_uav_core rviz.launch
+        - waitForControl; roslaunch mrs_rviz_plugins load_robot.launch
+        - waitForControl; waitForControl; roslaunch mrs_rviz_plugins rviz_interface.launch
+  - layout:
+      layout: tiled
+      panes:
+        - waitForControl; sleep 3; ~/.i3/layout_manager.sh ./layout.json

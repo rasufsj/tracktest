@@ -1,0 +1,712 @@
+<sdf version='1.7'>
+
+
+
+  <model name='arena3'>
+    <link name='base_link'>
+      <inertial>
+        <pose>3.88372 3.91269 2.85219 0 -0 0</pose>
+        <mass>322185</mass>
+        <inertia>
+          <ixx>4.96134e+06</ixx>
+          <ixy>27988.2</ixy>
+          <ixz>-115325</ixz>
+          <iyy>5.04516e+06</iyy>
+          <iyz>-82399.4</iyz>
+          <izz>5.7618e+06</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__piso_collision_collision_1'>
+        <pose>-0 -0 0.1 -0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/piso.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__base_movel_3_collision_collision_2'>
+        <pose>-0.2 0.1 0.1 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/base_movel_3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__base_movel_2_collision_collision_3'>
+        <pose>-0.1 -0.1 0.1001 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/base_movel_2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__Base_movel_1_collision_collision_4'>
+        <pose>-0.1 -0.1 0.1001 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/Base_movel_1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__Base_suspensa_1.5_collision_collision_5'>
+        <pose>-0.1 -0.1 0.099 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/Base_suspensa_1.5.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__base_supensa_1.0_collision_collision_6'>
+        <pose>-0.1 -0.1 0.099 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/base_supensa_1.0.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__prateleira_collision_collision_7'>
+        <pose>0 0 0 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/prateleira.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_A2_collision_collision_8'>
+        <pose>6.3 11.1 -6.351 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_A2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_A3_collision_collision_9'>
+        <pose>6.3 12.7 -6.351 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_A3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_A0_collision_collision_10'>
+        <pose>-0 -0 -0.051 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_A0.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_A1_collision_collision_11'>
+        <pose>6.3 9.3 -6.351 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_A1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_B0_collision_collision_12'>
+        <pose>5.75 12.3 -5.751 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_B0.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_B1_collision_collision_13'>
+        <pose>5.75 10.9 -5.751 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_B1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_B2_collision_collision_14'>
+        <pose>9.55 -0 -5.751 0 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_B2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_B3_collision_collision_15'>
+        <pose>9.55 -0 -5.751 0 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_B3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_C0_collision_collision_16'>
+        <pose>5.2 12.4114 -5.201 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_C0.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_C1_collision_collision_17'>
+        <pose>5.2 11.1 -5.201 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_C1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_C2_collision_collision_18'>
+        <pose>5.2 9.25 -5.201 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_C2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_C3_collision_collision_19'>
+        <pose>5.2 7.4 -5.201 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_C3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cupo_D0_collision_collision_20'>
+        <pose>4.65 12.7 -4.651 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cupo_D0.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cupo_D1_collision_collision_21'>
+        <pose>4.65 11.1 -4.651 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cupo_D1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cupo_D2_collision_collision_22'>
+        <pose>4.65 9.4 -4.651 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cupo_D2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__cubo_D3_collision_collision_23'>
+        <pose>4.65 7.5 -4.651 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_D3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__Base_de_Takeoff_collision_collision_24'>
+        <pose>-0 -0 -0.002 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/Base_de_Takeoff.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__parede2_collision_collision_25'>
+        <pose>0 -0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/parede2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__parede3_collision_collision_26'>
+        <pose>-0 -0 -0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/parede3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__parede4_collision_collision_27'>
+        <pose>-0 0.05 -0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/parede4.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 0.5</ambient>  <!-- Cor ambiente (R, G, B, A) -->
+          <diffuse>0.0 0.0 0.8 0.5</diffuse>  <!-- Cor difusa (R, G, B, A) -->
+          <specular>0.5 0.5 0.8 0.5</specular> <!-- Cor especular (brilho) -->
+          <emissive>0.0 0.0 0.3 0.5</emissive> <!-- Cor emissiva -->
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__piso_visual_visual_1'>
+        <pose>-0 -0 0.1 -0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/piso.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.6 0.4 0.2 1</ambient>  <!-- Cor ambiente (R, G, B, A) -->
+          <diffuse>0.5 0.3 0.1 1</diffuse>  <!-- Cor difusa (R, G, B, A) -->
+          <specular>0.3 0.2 0.1 1</specular> <!-- Cor especular (brilho) -->
+          <emissive>0.2 0.1 0.0 1</emissive> <!-- Cor emissiva -->
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__base_movel_3_visual_visual_2'>
+        <pose>-0.2 0.1 0.1 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/base_movel_3.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 1</ambient> 
+          <diffuse>0.0 0.0 0.8 1</diffuse>  
+          <specular>0.5 0.5 0.8 1</specular>
+          <emissive>0.0 0.0 0.3 1</emissive>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__base_movel_2_visual_visual_3'>
+        <pose>-0.1 -0.1 0.1001 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/base_movel_2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 1</ambient> 
+          <diffuse>0.0 0.0 0.8 1</diffuse>  
+          <specular>0.5 0.5 0.8 1</specular>
+          <emissive>0.0 0.0 0.3 1</emissive>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__Base_movel_1_visual_visual_4'>
+        <pose>-0.1 -0.1 0.1001 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/Base_movel_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 1</ambient> 
+          <diffuse>0.0 0.0 0.8 1</diffuse>  
+          <specular>0.5 0.5 0.8 1</specular>
+          <emissive>0.0 0.0 0.3 1</emissive>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__Base_suspensa_1.5_visual_visual_5'>
+        <pose>-0.1 -0.1 0.099 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/Base_suspensa_1.5.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 1</ambient> 
+          <diffuse>0.0 0.0 0.8 1</diffuse>  
+          <specular>0.5 0.5 0.8 1</specular>
+          <emissive>0.0 0.0 0.3 1</emissive>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__base_supensa_1.0_visual_visual_6'>
+        <pose>-0.1 -0.1 0.099 -0 -0 -0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/base_supensa_1.0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 1</ambient> 
+          <diffuse>0.0 0.0 0.8 1</diffuse>  
+          <specular>0.5 0.5 0.8 1</specular>
+          <emissive>0.0 0.0 0.3 1</emissive>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__prateleira_visual_visual_7'>
+        <pose>0 0 0 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/prateleira.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>  
+          <diffuse>0.8 0.8 0.8 1</diffuse>  
+          <specular>1.0 1.0 1.0 1</specular>
+          <emissive>0.3 0.3 0.3 1</emissive>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_A2_visual_visual_8'>
+        <pose>6.3 11.1 -6.351 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_A2.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_A3_visual_visual_9'>
+        <pose>6.3 12.7 -6.351 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_A3.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_A0_visual_visual_10'>
+        <pose>-0 -0 -0.051 -0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_A0.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+           <uri>model://arena3/textures</uri>
+           <name>A0.png</name>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_A1_visual_visual_11'>
+        <pose>6.3 9.3 -6.351 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_A1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_B0_visual_visual_12'>
+        <pose>5.75 12.3 -5.751 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_B0.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_B1_visual_visual_13'>
+        <pose>5.75 10.9 -5.751 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_B1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_B2_visual_visual_14'>
+        <pose>9.55 -0 -5.751 0 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_B2.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_B3_visual_visual_15'>
+        <pose>9.55 -0 -5.751 0 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_B3.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_C0_visual_visual_16'>
+        <pose>5.2 12.4114 -5.201 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_C0.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_C1_visual_visual_17'>
+        <pose>5.2 11.1 -5.201 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_C1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_C2_visual_visual_18'>
+        <pose>5.2 9.25 -5.201 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_C2.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_C3_visual_visual_19'>
+        <pose>5.2 7.4 -5.201 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_C3.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cupo_D0_visual_visual_20'>
+        <pose>4.65 12.7 -4.651 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cupo_D0.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cupo_D1_visual_visual_21'>
+        <pose>4.65 11.1 -4.651 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cupo_D1.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cupo_D2_visual_visual_22'>
+        <pose>4.65 9.4 -4.651 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cupo_D2.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__cubo_D3_visual_visual_23'>
+        <pose>4.65 7.5 -4.651 -3.14159 -1.5708 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/cubo_D3.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__Base_de_Takeoff_visual_visual_24'>
+        <pose>-0 -0 -0.002 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/Base_de_Takeoff.stl</uri>
+          </mesh>
+        </geometry>
+        
+        <material>         
+          <ambient>0.0 0.0 1.0 1</ambient> 
+          <diffuse>0.0 0.0 0.8 1</diffuse>  
+          <specular>0.5 0.5 0.8 1</specular>
+          <emissive>0.0 0.0 0.3 1</emissive>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__parede2_visual_visual_25'>
+        <pose>0 -0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/parede2.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 0.5</ambient> 
+          <diffuse>0.0 0.0 0.8 0.5</diffuse>  
+          <specular>0.5 0.5 0.8 0.5</specular>
+          <emissive>0.0 0.0 0.3 0.5</emissive> 
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__parede3_visual_visual_26'>
+        <pose>-0 -0 -0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/parede3.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 0.5</ambient> 
+          <diffuse>0.0 0.0 0.8 0.5</diffuse>  
+          <specular>0.5 0.5 0.8 0.5</specular> 
+          <emissive>0.0 0.0 0.3 0.5</emissive> 
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__parede4_visual_visual_27'>
+        <pose>-0 0.05 -0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>meshes/parede4.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 0.5</ambient>  
+          <diffuse>0.0 0.0 0.8 0.5</diffuse>  
+          <specular>0.5 0.5 0.8 0.5</specular> 
+          <emissive>0.0 0.0 0.3 0.5</emissive> 
+        </material>
+      </visual>
+    </link>
+    <frame name='piso_Base_movel_1' attached_to='piso'>
+      <pose>4.05 -0.05 -3.9 1.5708 -0 0</pose>
+    </frame>
+    <frame name='base_movel_3' attached_to='piso_Base_movel_1'/>
+    <frame name='piso_Base_movel_2' attached_to='piso'>
+      <pose>3.65 -0.0501 -1.8 1.5708 -0 0</pose>
+    </frame>
+    <frame name='base_movel_2' attached_to='piso_Base_movel_2'/>
+    <frame name='piso_Base_movel_3' attached_to='piso'>
+      <pose>1.65 -0.0501 -1.8 1.5708 -0 0</pose>
+    </frame>
+    <frame name='Base_movel_1' attached_to='piso_Base_movel_3'/>
+    <frame name='piso_Rigido-38' attached_to='piso'>
+      <pose>7.05 -0.049 -6.9 1.5708 -0 0</pose>
+    </frame>
+    <frame name='Base_suspensa_1.5' attached_to='piso_Rigido-38'/>
+    <frame name='piso_Rigido-39' attached_to='piso'>
+      <pose>1.05 -0.049 -4.4 1.5708 -0 0</pose>
+    </frame>
+    <frame name='base_supensa_1.0' attached_to='piso_Rigido-39'/>
+    <frame name='prateleira_delizador_A2' attached_to='prateleira'>
+      <pose>-0.1 2.5 1.05 0 0 0</pose>
+    </frame>
+    <frame name='cubo_A2' attached_to='prateleira_delizador_A2'/>
+    <frame name='prateleira_delizador_A3' attached_to='prateleira'>
+      <pose>-0.1 3.3 1.05 0 0 0</pose>
+    </frame>
+    <frame name='cubo_A3' attached_to='prateleira_delizador_A3'/>
+    <frame name='prateleira_deslizador_A0' attached_to='prateleira'>
+      <pose>-0.1 0.8 1.05 0 0 0</pose>
+    </frame>
+    <frame name='cubo_A0' attached_to='prateleira_deslizador_A0'/>
+    <frame name='prateleira_deslizador_A1' attached_to='prateleira'>
+      <pose>-0.1 1.6 1.05 0 0 0</pose>
+    </frame>
+    <frame name='cubo_A1' attached_to='prateleira_deslizador_A1'/>
+    <frame name='prateleira_deslizador_B0' attached_to='prateleira'>
+      <pose>-0.1 3.1 1.65 0 0 0</pose>
+    </frame>
+    <frame name='cubo_B0' attached_to='prateleira_deslizador_B0'/>
+    <frame name='prateleira_deslizador_B1' attached_to='prateleira'>
+      <pose>-0.1 2.4 1.65 0 0 0</pose>
+    </frame>
+    <frame name='cubo_B1' attached_to='prateleira_deslizador_B1'/>
+    <frame name='prateleira_deslizador_B2' attached_to='prateleira'>
+      <pose>-0.1 1.65 1.65 0 0 0</pose>
+    </frame>
+    <frame name='cubo_B2' attached_to='prateleira_deslizador_B2'/>
+    <frame name='prateleira_deslizador_B3' attached_to='prateleira'>
+      <pose>-0.1 0.8 1.65 0 0 0</pose>
+    </frame>
+    <frame name='cubo_B3' attached_to='prateleira_deslizador_B3'/>
+    <frame name='prateleira_deslizador_C0' attached_to='prateleira'>
+      <pose>-0.1 3.15379 2.2 0 0 0</pose>
+    </frame>
+    <frame name='cubo_C0' attached_to='prateleira_deslizador_C0'/>
+    <frame name='prateleira_deslizador_C1' attached_to='prateleira'>
+      <pose>-0.1 2.5 2.2 0 0 0</pose>
+    </frame>
+    <frame name='cubo_C1' attached_to='prateleira_deslizador_C1'/>
+    <frame name='prateleira_deslizador_C2' attached_to='prateleira'>
+      <pose>-0.1 1.5 2.2 0 0 0</pose>
+    </frame>
+    <frame name='cubo_C2' attached_to='prateleira_deslizador_C2'/>
+    <frame name='prateleira_deslizador_C3' attached_to='prateleira'>
+      <pose>-0.1 0.6 2.2 0 0 0</pose>
+    </frame>
+    <frame name='cubo_C3' attached_to='prateleira_deslizador_C3'/>
+    <frame name='prateleira_deslizador_D0' attached_to='prateleira'>
+      <pose>-0.1 3.3 2.75 0 0 0</pose>
+    </frame>
+    <frame name='cupo_D0' attached_to='prateleira_deslizador_D0'/>
+    <frame name='prateleira_deslizador_D1' attached_to='prateleira'>
+      <pose>-0.1 2.5 2.75 0 0 0</pose>
+    </frame>
+    <frame name='cupo_D1' attached_to='prateleira_deslizador_D1'/>
+    <frame name='prateleira_deslizador_D2' attached_to='prateleira'>
+      <pose>-0.1 1.65 2.75 0 0 0</pose>
+    </frame>
+    <frame name='cupo_D2' attached_to='prateleira_deslizador_D2'/>
+    <frame name='prateleira_deslizador_D3' attached_to='prateleira'>
+      <pose>-0.1 0.7 2.75 0 0 0</pose>
+    </frame>
+    <frame name='cubo_D3' attached_to='prateleira_deslizador_D3'/>
+    <frame name='piso_Rigido17' attached_to='piso'>
+      <pose>7.8 -0.049 -4.85 1.5708 -0 0</pose>
+    </frame>
+    <frame name='prateleira' attached_to='piso_Rigido17'/>
+    <frame name='piso_Rigido37' attached_to='piso'>
+      <pose>1.05 -0.049 -7.15 1.5708 -0 0</pose>
+    </frame>
+    <frame name='Base_de_Takeoff' attached_to='piso_Rigido37'/>
+    <frame name='piso_Rigido7' attached_to='piso'>
+      <pose>0.05 0 0.15 -1.5708 -0 -1.5708</pose>
+    </frame>
+    <frame name='parede2' attached_to='piso_Rigido7'/>
+    <frame name='piso_Rigido8' attached_to='piso'>
+      <pose>8.1 0 0.1 3.14159 -0 0</pose>
+    </frame>
+    <frame name='parede3' attached_to='piso_Rigido8'/>
+    <frame name='piso_Rigido9' attached_to='piso'>
+      <pose>0.05 0 -7.9 -1.5708 -0 -1.5708</pose>
+    </frame>
+    <frame name='parede4' attached_to='piso_Rigido9'/>
+    <frame name='base_link_Rigido6' attached_to='base_link'>
+      <pose>-0.05 7.9 0.15 -1.5708 -0 -0</pose>
+    </frame>
+    <frame name='piso' attached_to='base_link_Rigido6'/>
+  </model>
+</sdf>

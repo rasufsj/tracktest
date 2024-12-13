@@ -1,0 +1,757 @@
+<?xml version="1.0" ?>
+<robot name="arena" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find arena_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find arena_description)/urdf/arena.trans" />
+<xacro:include filename="$(find arena_description)/urdf/arena.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.050000000000000676 4.1 4.051234949058351" rpy="0 0 0"/>
+    <mass value="50852.299999999996"/>
+    <inertia ixx="548920.527029" iyy="277911.876279" izz="271093.404583" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="piso_1">
+  <inertial>
+    <origin xyz="4.051311075503581 -3.897858862995343 -3.755345033912977e-05" rpy="0 0 0"/>
+    <mass value="50264.649"/>
+    <inertia ixx="268677.259926" iyy="268647.997861" izz="537241.606722" ixy="177.260653" iyz="-5.294361" ixz="-3.302211"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.05 -8.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/piso_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.05 -8.0 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/piso_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="parede2_1">
+  <inertial>
+    <origin xyz="3.9500000000000006 0.0 4.001219698124713" rpy="0 0 0"/>
+    <mass value="51488.149999999994"/>
+    <inertia ixx="281388.916986" iyy="562692.096986" izz="281388.993583" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.1 -8.15 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/parede2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.1 -8.15 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/parede2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="parede3_1">
+  <inertial>
+    <origin xyz="0.0 -3.9499999999999993 4.001219698124713" rpy="0 0 0"/>
+    <mass value="51488.149999999994"/>
+    <inertia ixx="562692.096986" iyy="281388.916986" izz="281388.993583" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-8.15 -8.1 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/parede3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-8.15 -8.1 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/parede3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="parede4_1">
+  <inertial>
+    <origin xyz="3.8999999999999995 -0.14999999999999977 4.001204819277108" rpy="0 0 0"/>
+    <mass value="52123.99999999999"/>
+    <inertia ixx="284865.957671" iyy="576721.107671" izz="291942.023333" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.2 -0.2 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/parede4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.2 -0.2 -0.05" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/parede4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="prateleira_1">
+  <inertial>
+    <origin xyz="0.00010377143843776082 1.9499636789186838 1.9546700793635738" rpy="0 0 0"/>
+    <mass value="3788.0900444916265"/>
+    <inertia ixx="11660.252029" iyy="3086.566437" izz="8630.480654" ixy="-0.013773" iyz="-0.048602" ixz="0.011695"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.85 -3.15 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/prateleira_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.85 -3.15 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/prateleira_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_A0_1">
+  <inertial>
+    <origin xyz="-2.5757174171303632e-14 -2.1760371282653068e-14 0.04999999999998095" rpy="0 0 0"/>
+    <mass value="7.85"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -3.95 -1.149" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_A0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="CuboA0Material"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -3.95 -1.149" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_A0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_A1_1">
+  <inertial>
+    <origin xyz="-2.842170943040401e-14 -2.7533531010703882e-14 0.049999999999982725" rpy="0 0 0"/>
+    <mass value="7.85"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -4.75 -1.149" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_A1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -4.75 -1.149" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_A1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_A2_1">
+  <inertial>
+    <origin xyz="-3.2862601528904634e-14 -3.6415315207705135e-14 0.049999999999980504" rpy="0 0 0"/>
+    <mass value="7.85"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -5.65 -1.149" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_A2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -5.65 -1.149" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_A2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_A3_1">
+  <inertial>
+    <origin xyz="-3.552713678800501e-14 -4.085620730620576e-14 0.049999999999980504" rpy="0 0 0"/>
+    <mass value="7.85"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -6.45 -1.149" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_A3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -6.45 -1.149" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_A3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_B0_1">
+  <inertial>
+    <origin xyz="-1.4299672557172016e-13 -7.993605777301127e-14 0.04999999999999516" rpy="0 0 0"/>
+    <mass value="7.850000000007763"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -6.25 -1.749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_B0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -6.25 -1.749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_B0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_B1_1">
+  <inertial>
+    <origin xyz="-1.3322676295501878e-13 -7.460698725481052e-14 0.049999999999988276" rpy="0 0 0"/>
+    <mass value="7.850000000006157"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -5.55 -1.749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_B1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -5.55 -1.749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_B1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_B2_1">
+  <inertial>
+    <origin xyz="-1.2079226507921703e-13 -6.306066779870889e-14 0.04999999999997695" rpy="0 0 0"/>
+    <mass value="7.85000000000464"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -4.8 -1.749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_B2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -4.8 -1.749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_B2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_B3_1">
+  <inertial>
+    <origin xyz="-1.0480505352461478e-13 -5.773159728050814e-14 0.04999999999996785" rpy="0 0 0"/>
+    <mass value="7.850000000002766"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -3.95 -1.749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_B3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -3.95 -1.749" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_B3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_C3_1">
+  <inertial>
+    <origin xyz="-1.0036416142611415e-13 -6.084022174945858e-14 0.04999999999992122" rpy="0 0 0"/>
+    <mass value="7.849999999999374"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -3.75 -2.299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_C3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -3.75 -2.299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_C3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_C2_1">
+  <inertial>
+    <origin xyz="-1.0658141036401503e-13 -6.483702463810914e-14 0.04999999999991589" rpy="0 0 0"/>
+    <mass value="7.849999999999731"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -4.65 -2.299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_C2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -4.65 -2.299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_C2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_C1_1">
+  <inertial>
+    <origin xyz="-1.163513729807164e-13 -7.904787935331115e-14 0.04999999999992388" rpy="0 0 0"/>
+    <mass value="7.850000000002141"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -5.65 -2.299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_C1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -5.65 -2.299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_C1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_C0_1">
+  <inertial>
+    <origin xyz="-1.2256862191861728e-13 3.175270020250309e-07 0.04999999999992699" rpy="0 0 0"/>
+    <mass value="7.850000000002231"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -6.303793 -2.299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_C0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -6.303793 -2.299" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_C0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cubo_D3_1">
+  <inertial>
+    <origin xyz="-1.4299672557172016e-13 -6.394884621840902e-14 0.04999999999992166" rpy="0 0 0"/>
+    <mass value="7.850000000007942"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -3.85 -2.849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_D3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -3.85 -2.849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cubo_D3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cupo_D2_1">
+  <inertial>
+    <origin xyz="-1.474376176702208e-13 -7.016609515630989e-14 0.04999999999992122" rpy="0 0 0"/>
+    <mass value="7.85000000000812"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -4.8 -2.849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cupo_D2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -4.8 -2.849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cupo_D2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cupo_D1_1">
+  <inertial>
+    <origin xyz="-1.5276668818842154e-13 -7.904787935331115e-14 0.04999999999995586" rpy="0 0 0"/>
+    <mass value="7.850000000013654"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -5.65 -2.849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cupo_D1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -5.65 -2.849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cupo_D1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="cupo_D0_1">
+  <inertial>
+    <origin xyz="-1.580957587066223e-13 -8.348877145181177e-14 0.049999999999926104" rpy="0 0 0"/>
+    <mass value="7.850000000008834"/>
+    <inertia ixx="0.013083" iyy="0.013083" izz="0.013083" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.75 -6.45 -2.849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cupo_D0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.75 -6.45 -2.849" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/cupo_D0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Base_de_Takeoff_1">
+  <inertial>
+    <origin xyz="2.220446049250313e-16 -1.1102230246251565e-16 0.25049999999999983" rpy="0 0 0"/>
+    <mass value="11798.549999999997"/>
+    <inertia ixx="2459.015446" iyy="4179.637321" izz="6145.078125" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.1 -0.85 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/Base_de_Takeoff_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="Base_de_TakeoffMaterial"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.1 -0.85 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/Base_de_Takeoff_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Base_suspensa_1.5_1">
+  <inertial>
+    <origin xyz="0.0 -4.440892098500626e-16 0.7504999999999991" rpy="0 0 0"/>
+    <mass value="11782.849999999999"/>
+    <inertia ixx="3194.135236" iyy="3194.135236" izz="1963.808333" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-7.1 -1.1 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/Base_suspensa_1.5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-7.1 -1.1 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/Base_suspensa_1.5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_supensa_1.0_1">
+  <inertial>
+    <origin xyz="1.1102230246251565e-15 -3.1086244689504383e-15 0.5004999999999995" rpy="0 0 0"/>
+    <mass value="7857.849999999996"/>
+    <inertia ixx="1310.951963" iyy="1310.951963" izz="1309.641667" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.1 -3.6 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/base_supensa_1.0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.1 -3.6 -0.099" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/base_supensa_1.0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_movel_3_1">
+  <inertial>
+    <origin xyz="8.881784197001252e-16 -2.6645352591003757e-15 0.6499999999999991" rpy="0 0 0"/>
+    <mass value="10205.0"/>
+    <inertia ixx="2287.620833" iyy="2287.620833" izz="1700.833333" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-4.1 -4.1 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/base_movel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-4.1 -4.1 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/base_movel_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Base_movel_1_1">
+  <inertial>
+    <origin xyz="1.1102230246251565e-15 -4.440892098500626e-15 0.6499999999999994" rpy="0 0 0"/>
+    <mass value="10205.0"/>
+    <inertia ixx="2287.620833" iyy="2287.620833" izz="1700.833333" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.7 -6.2 -0.1001" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/Base_movel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.7 -6.2 -0.1001" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/Base_movel_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_movel_2_1">
+  <inertial>
+    <origin xyz="8.881784197001252e-16 -4.440892098500626e-15 0.6499999999999992" rpy="0 0 0"/>
+    <mass value="10205.0"/>
+    <inertia ixx="2287.620833" iyy="2287.620833" izz="1700.833333" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-3.7 -6.2 -0.1001" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/base_movel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-3.7 -6.2 -0.1001" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://arena_description/meshes/base_movel_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigido6" type="fixed">
+  <origin xyz="0.05 8.0 0.05" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="piso_1"/>
+</joint>
+
+<joint name="Rigido7" type="fixed">
+  <origin xyz="0.05 0.15 0.0" rpy="0 0 0"/>
+  <parent link="piso_1"/>
+  <child link="parede2_1"/>
+</joint>
+
+<joint name="Rigido8" type="fixed">
+  <origin xyz="8.1 0.1 0.0" rpy="0 0 0"/>
+  <parent link="piso_1"/>
+  <child link="parede3_1"/>
+</joint>
+
+<joint name="Rigido9" type="fixed">
+  <origin xyz="0.15 -7.8 0.0" rpy="0 0 0"/>
+  <parent link="piso_1"/>
+  <child link="parede4_1"/>
+</joint>
+
+<joint name="Rigido17" type="fixed">
+  <origin xyz="7.8 -4.85 0.049" rpy="0 0 0"/>
+  <parent link="piso_1"/>
+  <child link="prateleira_1"/>
+</joint>
+
+<joint name="deslizador_A0" type="fixed">
+  <origin xyz="-0.1 0.8 1.05" rpy="0 0 0"/> <!--mudar a posição na origin, mude y (entre 0.9 e 0.7)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_A0_1"/>
+</joint>
+
+<joint name="deslizador_A1" type="fixed">
+  <origin xyz="-0.1 1.6 1.05" rpy="0 0 0"/><!--mudar a posição na origin, mude y (entre 1.7 e 1.5)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_A1_1"/>
+</joint>
+
+<joint name="delizador_A2" type="fixed">
+  <origin xyz="-0.1 2.5 1.05" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 2.6 e 2.4)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_A2_1"/>
+</joint>
+
+<joint name="delizador_A3" type="fixed">
+  <origin xyz="-0.1 3.3 1.05" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 3.4 e 3.2)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_A3_1"/>
+</joint>
+
+<joint name="deslizador_B0" type="fixed">
+  <origin xyz="-0.1 3.1 1.65" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 3.2 e 3.0)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_B0_1"/>
+</joint>
+
+<joint name="deslizador_B1" type="fixed">
+  <origin xyz="-0.1 2.4 1.65" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 2.5 e 2.3)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_B1_1"/>
+</joint>
+
+<joint name="deslizador_B2" type="fixed">
+  <origin xyz="-0.1 1.65 1.65" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 1.75 e 1.55)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_B2_1"/>
+</joint>
+
+<joint name="deslizador_B3" type="fixed">
+  <origin xyz="-0.1 0.8 1.65" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 0.9 e 0.7)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_B3_1"/>
+</joint>
+
+<joint name="deslizador_C3" type="fixed">
+  <origin xyz="-0.1 0.6 2.2" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 0.7 e 0.5)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_C3_1"/>
+</joint>
+
+<joint name="deslizador_C2" type="fixed">
+  <origin xyz="-0.1 1.5 2.2" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 1.6 e 1.4)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_C2_1"/>
+</joint>
+
+<joint name="deslizador_C1" type="fixed">
+  <origin xyz="-0.1 2.5 2.2" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 2.6 e 2.4)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_C1_1"/>
+</joint>
+
+<joint name="deslizador_C0" type="fixed">
+  <origin xyz="-0.1 3.153793 2.2" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 3.25 e 3.05)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_C0_1"/>
+</joint>
+
+<joint name="deslizador_D3" type="fixed">
+  <origin xyz="-0.1 0.7 2.75" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 0.8 e 0.6)-->
+  <parent link="prateleira_1"/>
+  <child link="cubo_D3_1"/>
+</joint>
+
+<joint name="deslizador_D2" type="fixed">
+  <origin xyz="-0.1 1.65 2.75" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 1.75 e 1.55)-->
+  <parent link="prateleira_1"/>
+  <child link="cupo_D2_1"/>
+</joint>
+
+<joint name="deslizador_D1" type="fixed">
+  <origin xyz="-0.1 2.5 2.75" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 2.6 e 2.4)-->
+  <parent link="prateleira_1"/>
+  <child link="cupo_D1_1"/>
+</joint>
+
+<joint name="deslizador_D0" type="fixed">
+  <origin xyz="-0.1 3.3 2.75" rpy="0 0 0"/><!--mudar a posição, na origin mude y (entre 3.4 e 3.2)-->
+  <parent link="prateleira_1"/>
+  <child link="cupo_D0_1"/>
+</joint>
+
+<joint name="Rigido37" type="fixed">
+  <origin xyz="1.05 -7.15 0.049" rpy="0 0 0"/>
+  <parent link="piso_1"/>
+  <child link="Base_de_Takeoff_1"/>
+</joint>
+
+<joint name="Rigido 38" type="fixed">
+  <origin xyz="7.05 -6.9 0.049" rpy="0 0 0"/>
+  <parent link="piso_1"/>
+  <child link="Base_suspensa_1.5_1"/>
+</joint>
+
+<joint name="Rigido 39" type="fixed">
+  <origin xyz="1.05 -4.4 0.049" rpy="0 0 0"/>
+  <parent link="piso_1"/>
+  <child link="base_supensa_1.0_1"/>
+</joint>
+
+<joint name="Base_movel_1" type="fixed">
+  <origin xyz="4.05 -7.3 0.05" rpy="0 0 0"/><!--mudar a posição, na origin mude x (entre 5.9 e 3.05) e y (entre -3.9 e -7.3)-->
+  <parent link="piso_1"/>                   <!--cuidado para não colocar duas bases no mesmo lugar -->
+  <child link="base_movel_3_1"/>
+</joint>
+
+<joint name="Base_movel_3" type="fixed">
+  <origin xyz="4.0 -3.0 0.0501" rpy="0 0 0"/><!--mudar a posição, na origin mude x (entre 6.5 e 0.65 ) e y (entre -0.5 e -3.0)-->
+  <parent link="piso_1"/>                   <!--cuidado para não colocar duas bases no mesmo lugar -->
+  <child link="Base_movel_1_1"/>
+</joint>
+
+<joint name="Base_movel_2" type="fixed">
+  <origin xyz="4.5 -4.5 0.0501" rpy="0 0 0"/><!--mudar a posição, na origin mude x (entre 2.2 e 6.5 ) e y (entre -0.5 e -4.7)-->
+  <parent link="piso_1"/>                   <!--cuidado para não colocar duas bases no mesmo lugar -->
+  <child link="base_movel_2_1"/>
+</joint>
+
+</robot>

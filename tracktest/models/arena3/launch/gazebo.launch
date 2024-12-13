@@ -1,0 +1,22 @@
+<launch>
+  <!-- Caminho para o arquivo URDF -->
+  <arg name="urdf_file" default="$catkin2_ws/src/arena3/arena3.urdf" />
+
+  <!-- Publica a descrição do robô no ROS -->
+  <param name="robot_description" command="$(find xacro)/xacro $(arg urdf_file)" />
+
+  <!-- Nodo para publicar os estados do robô -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+    <param name="publish_frequency" value="50" />
+  </node>
+
+  <!-- Nodo para carregar o robô no Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-param robot_description -urdf -model arena3" />
+
+  <!-- Iniciar Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false" />
+    <arg name="use_sim_time" value="true" />
+  </include>
+</launch>
